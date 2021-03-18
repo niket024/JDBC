@@ -1,0 +1,38 @@
+package com.nik;
+
+import java.util.Scanner;
+
+public class Manager
+{
+public static void main(String[] args)
+{
+	System.out.println("**************Employee Details****************");
+	System.out.println("1.Add");
+	System.out.println("2.Update");
+	System.out.println("3.Delete");
+	System.out.println("4.Display");
+	System.out.println("5.Exit");
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Ener your choice?");
+	int ch=sc.nextInt();
+	switch (ch) {
+	case 1:
+		addEmployee();
+		break;
+	case 2:
+		updateEmployee();
+		break;
+	case 3:
+		delEmployee();
+		break;
+	case 4:
+		displayEmployee();
+		break;
+	case 1:
+		exit(0);
+		break;
+	default:
+		break;
+	}
+}
+}

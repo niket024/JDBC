@@ -1,0 +1,39 @@
+JDBC
+-------
+Java databse connectivity
+
+Architecture
+------------
+
+Drivers
+--------
+4 types of driver
+-----------
+1.Type-1(bridge driver)
+	It is not giving more performance
+	It is system specific
+	It is taking the help of DSN(data source name)
+2.Type-2(Native API)
+--------------
+3.Type-3 (Network Protocol)
+----------------------
+4.Type-4 (Thin driver)
+---------------------
+	It is giving more performance than other
+	It is database specific
+	
+4 steps
+-------------
+1.Registering the driver class
+2.Getting the connection
+3.Creating Statement Object
+4.Coposing and running the sql query
+
+SQL type
+--------
+1.DDL=create alter,drop
+execute()--return type is boolean
+2.DML=insert,delete,update
+executeUpdate()---return type is int
+3.DQL=select
+executeQuery()---return type is Resultset

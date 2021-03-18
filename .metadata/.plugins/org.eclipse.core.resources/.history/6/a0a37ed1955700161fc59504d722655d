@@ -1,0 +1,32 @@
+interface B
+{
+	void test();
+}
+
+class C implements B
+{
+	private C()
+	{
+		
+	}
+	@Override
+	public void test()
+	{
+		System.out.println("test");
+
+	}
+	static B getObject()
+	{
+		return new C();
+	}
+}
+
+public class A
+{
+public static void main(String[] args)
+{
+	C c1=new C();
+	c1.test();
+	
+}
+}

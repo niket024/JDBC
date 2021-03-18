@@ -1,0 +1,23 @@
+interface B
+{
+	void test();
+}
+
+class C implements B
+{
+	@Override
+	public void test()
+	{
+		System.out.println("test");
+
+	}
+}
+
+public class A
+{
+public static void main(String[] args)
+{
+	C b1=new C();
+	
+}
+}

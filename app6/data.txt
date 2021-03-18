@@ -1,0 +1,7 @@
+902-niket
+903-prem
+904-rani
+905-chnanchal
+String s1="906-kumari"
+string id=s1.subString(0,s1.indexOf("-"))
+string name=s1.subString(s1.indexOf("-")+1,s1.length())

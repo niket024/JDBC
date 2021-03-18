@@ -1,0 +1,23 @@
+//import java.beans.Statement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+
+public class swapna
+{
+public static void main(String[] args)throws Exception
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","great123");
+	Statement stmt=con.createStatement();
+	String sql="create table test(id int,Namevarchar(20))";
+	stmt.execute(sql);
+	System.out.println("done");
+	
+	
+}
+	
+	
+	
+}

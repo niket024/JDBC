@@ -1,0 +1,9 @@
+interface B
+{
+	void test();
+}
+
+public class A
+{
+
+}

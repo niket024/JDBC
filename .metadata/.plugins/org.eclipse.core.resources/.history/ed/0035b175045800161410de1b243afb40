@@ -1,0 +1,10 @@
+import oracle.jdbc.driver.OracleDriver;
+
+public class Manager
+{
+	public static void main(String[] args) throws Exception
+	{
+		OracleDriver o1=new OracleDriver();
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+	}
+}

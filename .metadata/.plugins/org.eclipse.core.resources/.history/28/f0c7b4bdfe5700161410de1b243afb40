@@ -1,0 +1,12 @@
+SQL=Structural Query Languages
+--------------------------------
+RDBMS---Table
+1.row
+2.column
+
+Mongo DB--JSON
+
+Types Of SQL
+----------------
+1.DDL=Data definition language
+	eg.Create, alter,drop

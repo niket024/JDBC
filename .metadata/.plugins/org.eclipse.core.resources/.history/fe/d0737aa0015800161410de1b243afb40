@@ -1,0 +1,56 @@
+SQL=Structural Query Languages
+--------------------------------
+RDBMS---Table
+1.row
+2.column
+
+Mongo DB--JSON
+
+Types Of SQL
+----------------
+1.DDL=Data definition language
+	eg.Create, alter,drop
+2.DML=data manipulation language
+	eg.insert,update,delete
+3.DQL=Data Query language
+	eg.Select
+4.DCL=Data control Language
+	eg.grant ,revoke
+5.DTL=Data transaction Language
+	eg.commit,rollback
+	
+JDBC=Java database connectivity
+------------------------------------
+It is mainly used for intacting with database from java program.
+Architecture:
+---------------------
+
+
+
+
+
+
+
+
+Drivers classes
+----------------
+4 types drivers in JDBC
+------------------
+1.Type-1(Bridge driver)
+	DSN=data source name
+	it is a system dependent
+	it is not giving much performance.
+2.Type-2(Native API)
+	it is also not giving too much performance
+
+
+
+
+
+
+
+
+
+
+
+

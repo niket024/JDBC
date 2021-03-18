@@ -1,0 +1,6 @@
+insert into emp values(89,'kkkk')
+insert into emp values(676,'hjjh')
+insert into emp values(90,'fgg')
+insert into emp values(23,'ht')
+insert into emp values(6,'ghgh')
+update emp set name='vinod' where id=78

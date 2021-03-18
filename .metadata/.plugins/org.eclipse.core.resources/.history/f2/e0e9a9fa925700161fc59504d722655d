@@ -1,0 +1,13 @@
+
+public class A
+{
+	int i=90;
+	void test()
+	{
+		System.out.println("test");
+	}
+	public static void main(String[] args)
+	{
+		A a1=new A();
+	}
+}

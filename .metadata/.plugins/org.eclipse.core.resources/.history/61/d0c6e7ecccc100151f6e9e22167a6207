@@ -1,0 +1,10 @@
+package com.nik;
+import java.sql.*;
+public class Manager5
+{
+	public static void main(String[] args)throws Exception 
+	{
+		
+	}
+
+}

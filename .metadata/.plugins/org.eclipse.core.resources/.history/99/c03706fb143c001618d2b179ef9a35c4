@@ -1,0 +1,12 @@
+JDBC
+-------
+Java databse connectivity
+
+Architecture
+------------
+
+Drivers
+--------
+4 types of driver
+-----------
+1.Type-1(bridge driver)

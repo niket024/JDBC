@@ -1,0 +1,12 @@
+interface B
+{
+	void test();
+}
+class C implements B
+{
+	
+}
+public class A
+{
+
+}
