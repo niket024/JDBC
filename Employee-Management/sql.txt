@@ -1,0 +1,8 @@
+create table test.employee(
+	id int,
+	firstName varchar(20),
+	lastName   varchar(20),
+	age int,
+	salary int,
+	designation varchar(20)
+)

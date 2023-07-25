@@ -8,7 +8,7 @@ public class DbUtil
 {
 	static {
 		try {
-			Class.forName("org.h2.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -18,7 +18,7 @@ public class DbUtil
 	{
 		try {
 			Connection con = DriverManager
-					.getConnection("jdbc:h2:tcp://localhost/~/test", "sa", "");
+					.getConnection("jdbc:mysql://localhost:3306/test", "root", "root");
 			return con;
 		} catch (SQLException e) {
 			e.printStackTrace();

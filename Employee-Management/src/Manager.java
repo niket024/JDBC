@@ -4,11 +4,12 @@ import java.util.Scanner;
 public class Manager {
 	public static void main(String[] args) {
 		String ch = "";
+		EmployeeRepo employeeRepo = new EmployeeRepo();
+
 		do {
 			menu();
 			Scanner sc = new Scanner(System.in);
 			int choice = sc.nextInt();
-			EmployeeRepo employeeRepo = new EmployeeRepo();
 			switch (choice) {
 			case 1:
 				Employee emp = getEmployee(sc);
@@ -19,7 +20,10 @@ public class Manager {
 				employeeRepo.updateEmployee(null);
 				break;
 			case 3:
-				employeeRepo.deleteEmployee(null);
+				System.out.println("Enter the id value");
+				int id = sc.nextInt();
+				employeeRepo.deleteEmployee(id);
+				System.out.println("Employee with id " + id + " deleted successfully");
 				break;
 			case 4:
 				Map<Integer, Employee> employees = employeeRepo.getAllEmployee();

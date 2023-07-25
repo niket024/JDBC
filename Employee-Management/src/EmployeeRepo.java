@@ -6,64 +6,57 @@ import java.util.Map;
 
 import util.DbUtil;
 
-public class EmployeeRepo
-{
-	public void createEmployee(Employee emp)
-	{
+public class EmployeeRepo {
+	public void createEmployee(Employee emp) {
 
 		try {
-			// Statement stmt = DbUtil.getConnection().createStatement();
-			String sql = "insert into Employee values(?,?,?,?,?,?)";
-			PreparedStatement pstmt = DbUtil.getConnection()
-					.prepareStatement(sql);
+			String sql = "insert into Employee (id, firstname, lastname, designation, age, salary) values(?,?,?,?,?,?)";
+			PreparedStatement pstmt = DbUtil.getConnection().prepareStatement(sql);
 			pstmt.setInt(1, emp.getId());
 			pstmt.setString(2, emp.getFirstName());
 			pstmt.setString(3, emp.getLastName());
 			pstmt.setString(4, emp.getDesignation());
 			pstmt.setInt(5, emp.getAge());
 			pstmt.setInt(6, emp.getSalary());
-			/*
-			 * String sql = "insert into Employee values(" + emp.getId() + ",'"
-			 * + emp.getFirstName() + "','" + emp.getLastName() + "','" +
-			 * emp.getDesignation() + "'," + emp.getAge() + "," +
-			 * emp.getSalary() + ")"; System.out.println(sql);
-			 * stmt.executeUpdate(sql);
-			 */
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
 
-	public void updateEmployee(Employee emp)
-	{
+	public void updateEmployee(Employee emp) {
+		String sql = "update table employee set firtname = ? where id =?";
+		//TODO: please get all the new value from user and update the employee
 		System.out.println("Under construction");
 
 	}
 
-	public void deleteEmployee(Object object)
-	{
-		System.out.println("Under construction");
-
+	public void deleteEmployee(int id) {
+		try {
+			String sql = "delete from employee where id =?";
+			PreparedStatement pstmt = DbUtil.getConnection().prepareStatement(sql);
+			pstmt.setInt(1, id);
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
-	public Map<Integer, Employee> getAllEmployee()
-	{
+	public Map<Integer, Employee> getAllEmployee() {
 		Map<Integer, Employee> map = new HashMap<>();
 		String sql = "Select * from Employee";
 		try {
-			PreparedStatement preparedStatement = DbUtil.getConnection()
-					.prepareStatement(sql);
+			PreparedStatement preparedStatement = DbUtil.getConnection().prepareStatement(sql);
 			ResultSet resultSet = preparedStatement.executeQuery();
 			while (resultSet.next()) {
-				int id = resultSet.getInt(1);
+				int id = resultSet.getInt("id");
 				Employee employee = new Employee();
 				employee.setId(id);
-				employee.setFirstName(resultSet.getString(2));
-				employee.setLastName(resultSet.getString(3));
-				employee.setDesignation(resultSet.getString(4));
-				employee.setAge(resultSet.getInt(5));
-				employee.setSalary(resultSet.getInt(6));
+				employee.setFirstName(resultSet.getString("firstname"));
+				employee.setLastName(resultSet.getString("lastname"));
+				employee.setDesignation(resultSet.getString("designation"));
+				employee.setAge(resultSet.getInt("age"));
+				employee.setSalary(resultSet.getInt("salary"));
 				map.put(id, employee);
 			}
 		} catch (SQLException e) {
@@ -72,8 +65,7 @@ public class EmployeeRepo
 		return map;
 	}
 
-	public void getEmployeeById()
-	{
+	public void getEmployeeById() {
 		System.out.println("Under construction");
 
 	}
