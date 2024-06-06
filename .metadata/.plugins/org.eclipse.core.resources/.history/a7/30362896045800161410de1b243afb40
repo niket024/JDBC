@@ -1,9 +1,0 @@
-import oracle.jdbc.driver.OracleDriver;
-
-public class Manager
-{
-	public static void main(String[] args) throws Exception
-	{
-		Class.forName("oracle.jdbc.driver.OracleDriver");
-	}
-}

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;resultsetmeta/src/DatabaseMetaData.java&apos; to &apos;DatabaseMetaData1.java&apos;" description="Rename resource &apos;DatabaseMetaData.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/DatabaseMetaData.java" name="DatabaseMetaData1.java" stamp="1388481549833" updateReferences="true"/>
-</session>

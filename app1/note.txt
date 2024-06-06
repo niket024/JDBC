@@ -1,6 +1,6 @@
 JDBC
 -------
-Java databse connectivity
+Java database connectivity
 
 Architecture
 ------------
@@ -27,13 +27,24 @@ Drivers
 1.Registering the driver class
 2.Getting the connection
 3.Creating Statement Object
-4.Coposing and running the sql query
+4.Composing and running the sql query
 
 SQL type
 --------
-1.DDL=create alter,drop
+1.DDL (Data definition language)=create, alter,drop
 execute()--return type is boolean
-2.DML=insert,delete,update
+2.DML (Data manipulation language)=insert,delete,update
 executeUpdate()---return type is int
-3.DQL=select
+3.DQL (Data query language)=select
 executeQuery()---return type is Resultset
+
+
+
+To start the mysql
+-----------------------
+1.goto mysql unzip folder->bin
+2. open cmd
+4. type "mysql -u root -p"
+5. give password as root
+6. use dbname eg. use test
+
